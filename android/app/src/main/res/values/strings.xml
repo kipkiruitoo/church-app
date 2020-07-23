@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">church</string>
+    <string name="title_activity_main">church</string>
+    <string name="package_name">kipkiruitoo.github.io.church</string>
+    <string name="custom_url_scheme">kipkiruitoo.github.io.church</string>
+</resources>

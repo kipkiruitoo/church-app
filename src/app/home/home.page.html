@@ -1,20 +1,80 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-title>
-      Blank
+      Contact Tracing
     </ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="ion-padding">
+  <img
+    (click)="scan()"
+    src="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/07/1499401426qr_icon.svg"
+  />
+  <br />
+  <span class="scantext">Scan Church Qr Code</span>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <form (submit)="save()">
+    <ion-item lines="full">
+      <ion-label position="floating">Name</ion-label>
+      <ion-input
+        [(ngModel)]="name"
+        name="name"
+        type="text"
+        required
+      ></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Phone Number</ion-label>
+      <ion-input
+        [(ngModel)]="phone"
+        type="number"
+        name="phone"
+        required
+      ></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Gender</ion-label>
+      <ion-input
+        [(ngModel)]="gender"
+        type="text"
+        name="gender"
+        required
+      ></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Location</ion-label>
+      <ion-input
+        type="text"
+        [(ngModel)]="location"
+        name="location"
+        required
+      ></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Year of Birth</ion-label>
+      <ion-input type="text" [(ngModel)]="yob" name="yob" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Seat Number</ion-label>
+      <ion-input
+        type="text"
+        [(ngModel)]="seatnumber"
+        name="seatnumber"
+        required
+      ></ion-input>
+    </ion-item>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="success" expand="block"
+          >Save</ion-button
+        >
+      </ion-col>
+    </ion-row>
+  </form>
 </ion-content>

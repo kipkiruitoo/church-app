@@ -1,7 +1,8 @@
 {
   "name": "church",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }
